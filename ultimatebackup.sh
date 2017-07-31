@@ -270,7 +270,7 @@ function fullBackup {
 	FOLDERS=`ls /`
 	BDIR=`date +"%Y%m%d"`;
 	mkdir $BDIR
-	echo "Make Folders: ${EXCLUDE}, then untar." > /storage/backup/server/full/$BDIR/restore.txt
+	echo "Make Folders: ${EXCLUDE}, then untar." > "$SERVERBACKUPFOLDER/full/$BDIR/restore.txt"
 	cd /
 	#echo "Backing up MBR...";
 	#dd if=/dev/hda of=${SERVERBACKUPFOLDER}/$BDIR/MBR.iso bs=512 count=1
